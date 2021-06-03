@@ -2,11 +2,8 @@ pipeline {
     agent any
     triggers { pollSCM('* * * * *') }
     stages {
-        stage('Checkout') {
-            steps {
-                git url: 'https://github.com/stingofung/jgsu-spring-petclinic.git', branch: 'main'
-            }
-        }
+        //implicit checkout stage
+
         stage('Build') {
             steps {
                 sh './mvnw clean package'
