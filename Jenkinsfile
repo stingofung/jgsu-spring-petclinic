@@ -2,7 +2,7 @@ pipeline {
     agent any
     triggers { pollSCM('* * * * *') }
     stages {
-        //implicit checkout stage
+        //implicit checkout stage...
 
         stage('Build') {
             steps {
